@@ -1,1 +1,1 @@
-Test electron app for check CPU data
+Simple Electron app for check CPU data
