@@ -1,7 +1,7 @@
 {
   "name": "test-app",
   "productName": "CPU Monitor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
@@ -22,7 +22,9 @@
       "github"
     ],
     "win": {
-      "target": ["nsis"]
+      "target": [
+        "nsis"
+      ]
     },
     "nsis": {
       "uninstallDisplayName": "CPU Monitor",
@@ -31,49 +33,14 @@
     }
   },
   "keywords": [],
-  "author": {
-    "name": "artsiom.lazar",
-    "email": "artsiom.lazar@afrans.by"
-  },
+  "author": "Artsiom Lazar",
   "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "test_app"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ]
-    }
-  },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^4.3.8",
     "os-utils": "0.0.14"
   },
   "devDependencies": {
     "electron-builder": "^22.10.5",
-    "@electron-forge/cli": "^6.0.0-beta.54",
-    "@electron-forge/maker-deb": "^6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
-    "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "electron": "12.0.1"
   }
 }

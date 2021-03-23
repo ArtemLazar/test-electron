@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <title>CPU Monitor</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-    <div class="box">
-        <span class="label">CPU (%)</span>
-        <span id="cpu">-</span>
+    <div class="body-container">
+        <div class="text-container">
+            <div class="box">
+                <span class="label">CPU (%)</span>
+                <span id="cpu">-</span>
+            </div>
+            <div class="box">
+                <span class="label">Free mem (%)</span>
+                <span id="mem">-</span>
+            </div>
+            <div class="box">
+                <span class="label">Total Mem (GB)</span>
+                <span id="total-mem">-</span>
+            </div>
+        </div>
+        <div class="updating-container">
+            <p>Current version: <span id="version"></span></p>
+            <div id="messages" style="color:cyan"></div>
+            <div class="w3-light-grey">
+                <div class="w3-blue" style="height:24px;width:0%" id="progressBar"></div>
+            </div>
+        </div>
     </div>
-    <div class="box">
-        <span class="label">Free mem (%)</span>
-        <span id="mem">-</span>
-    </div>
-    <div class="box">
-        <span class="label">Total Mem (GB)</span>
-        <span id="total-mem">-</span>
-    </div>
-<script src="script.js"></script>
+    <script src="renderer.js"></script>
 </body>
 </html>
