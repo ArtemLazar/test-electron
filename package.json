@@ -19,7 +19,10 @@
     "appId": "test-app",
     "productName": "CPU Monitor",
     "publish": [
-      "github"
+      {
+        "provider": "github",
+        "private": true
+      }
     ],
     "win": {
       "target": [
