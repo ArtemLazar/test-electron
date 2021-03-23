@@ -20,8 +20,7 @@
     "productName": "CPU Monitor",
     "publish": [
       {
-        "provider": "generic",
-        "url": "git+https://github.com/ArtemLazar/test-electron.git",
+        "provider": "git",
         "private": true
       }
     ],
