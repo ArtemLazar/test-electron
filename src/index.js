@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Tray } = require('electron');
 const { autoUpdater } = require('electron-updater');
 const os = require('os-utils');
 const path = require('path');
@@ -16,7 +16,8 @@ const createWindow = () => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false
-        }
+        },
+        icon: __dirname + '/images/icon.png'
     });
 
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -32,6 +33,9 @@ const createWindow = () => {
 
 app.on('ready', () => {
     createWindow();
+
+    const tray = new Tray(__dirname + '/images/icon.png');
+    tray.setToolTip('CPU Monitor');
 
     autoUpdater.checkForUpdatesAndNotify();
 
