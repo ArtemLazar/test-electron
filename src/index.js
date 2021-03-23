@@ -44,6 +44,13 @@ app.on('ready', () => {
     })
 });
 
+autoUpdater.setFeedURL({
+    provider: 'github',
+    repo: 'test-electron',
+    owner: 'ArtemLazar',
+    private: true
+})
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
