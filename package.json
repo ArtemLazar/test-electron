@@ -21,6 +21,7 @@
     "publish": [
       {
         "provider": "generic",
+        "url": "git+https://github.com/ArtemLazar/test-electron.git",
         "private": true
       }
     ],
