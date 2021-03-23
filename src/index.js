@@ -9,10 +9,6 @@ const dispatch = (data) => {
     mainWindow.webContents.send('message', data);
 };
 
-if (require('electron-squirrel-startup')) {
-    app.quit();
-}
-
 const createWindow = () => {
     mainWindow = new BrowserWindow({
         width: 1000,
