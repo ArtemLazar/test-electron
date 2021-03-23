@@ -20,8 +20,7 @@
     "productName": "CPU Monitor",
     "publish": [
       {
-        "provider": "git",
-        "private": true
+        "provider": "github"
       }
     ],
     "win": {
